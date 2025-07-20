@@ -1,3 +1,36 @@
 ---
-title: "Untitled"
+title: "Michael Shiuming Truong"
+page-layout: full
+subtitle: PhD Student
+affiliation: York University
+about: 
+    id: about-heading
+    template: trestles
+    image: images/emstruonger_2023.jpg
+    links: 
+      - text: "{{< fa envelope >}}"
+        aria-label: email
+        href: "mailto:emstruonger@gmail.com"
+      - icon: github
+        aria-label: github
+        href: https://github.com/emstruong
+      - text: "{{< fa graduation-cap >}}"
+        aria-label: google-scholar
+        href: https://scholar.google.com/citations?user=E-XEowgAAAAJ&hl=en&oi=sra
 ---
+
+::: {#about-me}
+I am a 4th year PhD student in the Quantitative Methods program of the Department of Psychology at York University.
+
+I am interested in the powerful and insightful application of quantitative analysis towards psychological data for scientific purposes.
+
+My research currently focuses on:
+
+1.  The effects of cluster size in multilevel/hierarchical models
+
+2.  The development of fast and robust Integrated Generalized Structured Component Analysis Trees (IGSCA-Trees) in the R package [*cSEM*](https://github.com/FloSchuberth/cSEM)
+
+3.  Using philosophy of science, psychology and statistics to provide a justification for the application of machine-learning structural equation modeling methods called 'Falsificatory Data Analysis'
+
+Please feel free to reach out to me!
+:::
