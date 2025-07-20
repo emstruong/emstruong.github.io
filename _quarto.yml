@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Michael Shiuming Truong"
+  image: images/emstruonger_2023.jpg
+  search: 
+      location: navbar
+      type: textbox
+  navbar:
+    background: primary
+    pinned: true
+    left: 
+      - text: Research
+        href: research/index.qmd
+      - text: Publications
+        href: publications/index.qmd
+      - text: Software
+        href: software/index.qmd
+      - text: Talks
+        href: talks/index.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: CV
+        href: cv/index.qmd
+    right:
+      - text: "{{< fa envelope >}}"
+        aria-label: email
+        href: "mailto:emstruonger@gmail.com"
+      - icon: github
+        aria-label: github
+        href: https://github.com/emstruong
+      - text: "{{< fa graduation-cap >}}"
+        aria-label: google-scholar
+        href: https://scholar.google.com/citations?user=E-XEowgAAAAJ&hl=en&oi=sra
+  page-footer: 
+      left: "Copyright 2025, Michael S. Truong"
+      right: 
+          - text: "Based on Paul Bürkner's Website"
+            href: https://github.com/paul-buerkner/paul-buerkner.github.io/tree/master
+      
+format:
+  html:
+    theme: 
+        light: flatly
+        dark: darkly
+    css: styles.css
+
