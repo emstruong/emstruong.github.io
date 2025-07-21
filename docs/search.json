@@ -7,8 +7,8 @@
     "text": "Truong MS., Zhang, X., & Flora, DB. (2025) Talk: What Happens When Sample Size is the Confound in a Multilevel Model? Presented at International Meeting of the Psychometric Society 2025. Slides\nTruong MS. & Choi JY. (2024) Talk: Machine Learning Structural Equation Modeling and Falsificatory Data Analysis. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides\nTruong MS., Crone G., Alter, U., & Choi JY. (2024) Poster: Planting Decision Trees: Human-Friendly Interpretation of Monte Carlo Simulations, Multiverse Analyses and Multivariate Posterior Distributions. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
+    "objectID": "posts/placeholder-post/index.html",
+    "href": "posts/placeholder-post/index.html",
     "title": "First Real Post",
     "section": "",
     "text": "This is a placeholder post for later\n\n\n\nReuseCC BY 4.0CitationBibTeX citation:@online{truong2025,\n  author = {Truong, Michael S.},\n  title = {First {Real} {Post}},\n  date = {2025-07-20},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nTruong, Michael S. 2025. “First Real Post.” July 20, 2025."
@@ -75,19 +75,5 @@
     "title": "Welcome to my Blog",
     "section": "",
     "text": "First blog post based on default template by Tristan O’Malley.\n\nMuch of the design and functionality of this blog is copy-pasted manually from Dr. Merkle and Dr. Burkner’s blogs.\n\n\n\n\n\n\n\n\n\n\nTesting Head 1\n1\n1 Testing how footnotes look like\nTesting Head 2\n\n\n\n\n\n\nReuseCC BY 4.0CitationBibTeX citation:@online{truong2025,\n  author = {Truong, Michael S.},\n  title = {Welcome to My {Blog}},\n  date = {2025-07-19},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nTruong, Michael S. 2025. “Welcome to My Blog.” July 19,\n2025."
-  },
-  {
-    "objectID": "posts/init/index.html#testing-head-2",
-    "href": "posts/init/index.html#testing-head-2",
-    "title": "Welcome to my Blog",
-    "section": "Testing Head 2",
-    "text": "Testing Head 2"
-  },
-  {
-    "objectID": "posts/placeholder-post/index.html",
-    "href": "posts/placeholder-post/index.html",
-    "title": "First Real Post",
-    "section": "",
-    "text": "This is a placeholder post for later\n\n\n\nReuseCC BY 4.0CitationBibTeX citation:@online{truong2025,\n  author = {Truong, Michael S.},\n  title = {First {Real} {Post}},\n  date = {2025-07-20},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nTruong, Michael S. 2025. “First Real Post.” July 20, 2025."
   }
 ]
