@@ -40,5 +40,12 @@
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Scientific Talks and Posters",
+    "section": "",
+    "text": "Truong MS., Zhang, X., & Flora, DB. (2025) Talk: What Happens When Sample Size is the Confound in a Multilevel Model? Presented at International Meeting of the Psychometric Society 2025. Slides\nTruong MS. & Choi JY. (2024) Talk: Machine Learning Structural Equation Modeling and Falsificatory Data Analysis. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides\nTruong MS., Crone G., Alter, U., & Choi JY. (2024) Poster: Planting Decision Trees: Human-Friendly Interpretation of Monte Carlo Simulations, Multiverse Analyses and Multivariate Posterior Distributions. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides"
   }
 ]
