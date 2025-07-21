@@ -20,7 +20,7 @@ about:
 ---
 
 ::: {#about-me}
-I am a 4th year PhD student in the Quantitative Methods program of the Department of Psychology at York University.
+I am a 4th year PhD student in the Quantitative Methods program of the Department of Psychology at York University, supervised by [Dr. Ji Yeh Choi](https://health.yorku.ca/health-profiles/?dept=&mid=1798682).
 
 I am interested in the powerful and insightful application of quantitative analysis towards psychological data for scientific purposes.
 
