@@ -35,7 +35,7 @@ website:
         aria-label: google-scholar
         href: https://scholar.google.com/citations?user=E-XEowgAAAAJ&hl=en&oi=sra
   page-footer: 
-      left: "Copyright 2025, Michael S. Truong"
+      left: "Copyright 2025, Michael Shiuming Truong"
       right: 
           - text: "Based on Dr. Paul Bürkner's Website"
             href: https://github.com/paul-buerkner/paul-buerkner.github.io/tree/master

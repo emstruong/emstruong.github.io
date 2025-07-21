@@ -28,6 +28,34 @@
     "text": "About this blog"
   },
   {
+    "objectID": "software/index.html",
+    "href": "software/index.html",
+    "title": "Software Contributions",
+    "section": "",
+    "text": "These are my main contributions to open-source (software) projects."
+  },
+  {
+    "objectID": "software/index.html#csem",
+    "href": "software/index.html#csem",
+    "title": "Software Contributions",
+    "section": "cSEM",
+    "text": "cSEM\n\n\n\n\n\ncSEM: Composite-based SEM\nMy role: Contributor to GSCA-related components and various features\nWebsite"
+  },
+  {
+    "objectID": "software/index.html#simdesign",
+    "href": "software/index.html#simdesign",
+    "title": "Software Contributions",
+    "section": "SimDesign",
+    "text": "SimDesign\n\n\n\n\n\nSimDesign: Structure for organizing Monte Carlo simulations in R\nMy role: Quality Control and Contributor\nWebsite"
+  },
+  {
+    "objectID": "software/index.html#vis-mlm",
+    "href": "software/index.html#vis-mlm",
+    "title": "Software Contributions",
+    "section": "Vis-MLM",
+    "text": "Vis-MLM\n\n\n\n\n\nViz-MLM: Visualizing Multivariate Data and Models in R\nMy role: Research Assistant\nWebsite"
+  },
+  {
     "objectID": "cv/index.html",
     "href": "cv/index.html",
     "title": "Curriculum Vitae",
@@ -44,7 +72,7 @@
   {
     "objectID": "talks/index.html",
     "href": "talks/index.html",
-    "title": "Scientific Talks and Posters",
+    "title": "Selected Scientific Talks and Posters",
     "section": "",
     "text": "Truong MS., Zhang, X., & Flora, DB. (2025) Talk: What Happens When Sample Size is the Confound in a Multilevel Model? Presented at International Meeting of the Psychometric Society 2025. Slides\nTruong MS. & Choi JY. (2024) Talk: Machine Learning Structural Equation Modeling and Falsificatory Data Analysis. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides\nTruong MS., Crone G., Alter, U., & Choi JY. (2024) Poster: Planting Decision Trees: Human-Friendly Interpretation of Monte Carlo Simulations, Multiverse Analyses and Multivariate Posterior Distributions. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides"
   }

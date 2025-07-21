@@ -1,5 +1,5 @@
 ---
-title: "Scientific Talks and Posters"
+title: "Selected Scientific Talks and Posters"
 ---
 
 -   Truong MS., Zhang, X., & Flora, DB. (2025) Talk: *What Happens When Sample Size is the Confound in a Multilevel Model?* Presented at [International Meeting of the Psychometric Society 2025](https://www.psychometricsociety.org/imps-2025). [Slides](pdf/IMPS_2025_MTruong_July_11_2025.pdf){.btn .btn-outline-primary .btn .btn-page-header .btn-xs role="button"}
@@ -7,5 +7,3 @@ title: "Scientific Talks and Posters"
 -   Truong MS. & Choi JY. (2024) Talk: *Machine Learning Structural Equation Modeling and Falsificatory Data Analysis.* Presented at [Canadian Psychological Association 2024](https://cpa.ca/docs/File/Convention/2024/Abstract%20Book%202024-v1.2.pdf) and [Modern Modeling Methods 2024](https://modeling.uconn.edu/mmm-2024-archive/). [Slides](pdf/MMM2024 Talk.pdf){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
 
 -   Truong MS., Crone G., Alter, U., & Choi JY. (2024) Poster: *Planting Decision Trees: Human-Friendly Interpretation of Monte Carlo Simulations, Multiverse Analyses and Multivariate Posterior Distributions.* Presented at [Canadian Psychological Association 2024](https://cpa.ca/docs/File/Convention/2024/Abstract%20Book%202024-v1.2.pdf) and [Modern Modeling Methods 2024](https://modeling.uconn.edu/mmm-2024-archive/). [Slides](pdf/CPA_MMM_2024_Poster.pdf){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
-
--   

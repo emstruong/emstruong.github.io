@@ -1,3 +1,56 @@
 ---
-title: "Untitled"
+title: "Software Contributions"
 ---
+
+These are my main contributions to open-source (software) projects.
+
+## cSEM
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-2}
+![](../images/cSEMsticker.svg){width=100% fig-alt="The cSEM logo."}
+:::
+::: {.g-col-12 .g-col-md-10}
+
+cSEM: Composite-based SEM
+
+My role: Contributor to GSCA-related components and various features
+
+[Website](https://github.com/FloSchuberth/cSEM){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+:::
+:::
+
+## SimDesign
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-2}
+![](../images/SimDesign-logo.png){width=100% fig-alt="The SimDesign logo."}
+:::
+::: {.g-col-12 .g-col-md-10}
+
+SimDesign: Structure for organizing Monte Carlo simulations in R 
+
+My role: Quality Control and Contributor
+
+[Website](https://github.com/philchalmers/SimDesign){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+:::
+:::
+
+## Vis-MLM
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-2}
+![](../images/Viz-MLM-logo.jpg){width=100% fig-alt="The Viz-MLM logo."}
+:::
+::: {.g-col-12 .g-col-md-10}
+
+Viz-MLM: Visualizing Multivariate Data and Models in R
+
+My role: Research Assistant
+
+[Website](https://github.com/friendly/Vis-MLM-book){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+:::
+:::
