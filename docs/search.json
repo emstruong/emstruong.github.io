@@ -1,31 +1,24 @@
 [
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "emstruong.github.io",
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Selected Scientific Talks and Posters",
     "section": "",
-    "text": "No matching items"
+    "text": "Truong MS., Zhang, X., & Flora, DB. (2025) Talk: What Happens When Sample Size is the Confound in a Multilevel Model? Presented at International Meeting of the Psychometric Society 2025. Slides\nTruong MS. & Choi JY. (2024) Talk: Machine Learning Structural Equation Modeling and Falsificatory Data Analysis. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides\nTruong MS., Crone G., Alter, U., & Choi JY. (2024) Poster: Planting Decision Trees: Human-Friendly Interpretation of Monte Carlo Simulations, Multiverse Analyses and Multivariate Posterior Distributions. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Michael Shiuming Truong",
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum Vitae",
     "section": "",
-    "text": "I am a 4th year PhD student in the Quantitative Methods program of the Department of Psychology at York University.\nI am interested in the powerful and insightful application of quantitative analysis towards psychological data for scientific purposes.\nMy research currently focuses on:\n\nThe effects of cluster size in multilevel/hierarchical models\nThe development of fast and robust Integrated Generalized Structured Component Analysis Trees (IGSCA-Trees) in the R package cSEM\nUsing philosophy of science, psychology and statistics to provide a justification for the application of machine-learning structural equation modeling methods called ‘Falsificatory Data Analysis’\n\nPlease feel free to reach out to me!"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
+    "text": "Download current CV"
   },
   {
     "objectID": "software/index.html",
@@ -56,24 +49,31 @@
     "text": "Vis-MLM\n\n\n\n\n\nViz-MLM: Visualizing Multivariate Data and Models in R\nMy role: Research Assistant\nWebsite"
   },
   {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "Curriculum Vitae",
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Michael Shiuming Truong",
     "section": "",
-    "text": "Download current CV"
+    "text": "I am a 4th year PhD student in the Quantitative Methods program of the Department of Psychology at York University.\nI am interested in the powerful and insightful application of quantitative analysis towards psychological data for scientific purposes.\nMy research currently focuses on:\n\nThe effects of cluster size in multilevel/hierarchical models\nThe development of fast and robust Integrated Generalized Structured Component Analysis Trees (IGSCA-Trees) in the R package cSEM\nUsing philosophy of science, psychology and statistics to provide a justification for the application of machine-learning structural equation modeling methods called ‘Falsificatory Data Analysis’\n\nPlease feel free to reach out to me!"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "About this blog"
   },
   {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Selected Scientific Talks and Posters",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Learning and Thinking about Statistical Learning and Thinking",
     "section": "",
-    "text": "Truong MS., Zhang, X., & Flora, DB. (2025) Talk: What Happens When Sample Size is the Confound in a Multilevel Model? Presented at International Meeting of the Psychometric Society 2025. Slides\nTruong MS. & Choi JY. (2024) Talk: Machine Learning Structural Equation Modeling and Falsificatory Data Analysis. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides\nTruong MS., Crone G., Alter, U., & Choi JY. (2024) Poster: Planting Decision Trees: Human-Friendly Interpretation of Monte Carlo Simulations, Multiverse Analyses and Multivariate Posterior Distributions. Presented at Canadian Psychological Association 2024 and Modern Modeling Methods 2024. Slides"
+    "text": "No matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   }
 ]
