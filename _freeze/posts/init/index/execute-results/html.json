@@ -1,0 +1,17 @@
+{
+  "hash": "d5f92796898cacb05964fc45f9fb1fcc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Welcome to my Blog\"\ndate: \"2025-07-19\"\ncategories: [news]\n---\n\n\n\nFirst blog post based on default template by Tristan O'Malley.\\\n\nMuch of the design and functionality of this blog is copy-pasted manually from [Dr. Merkle](https://github.com/ecmerkle/ecmerkle.github.io) and [Dr. Burkner's](https://github.com/paul-buerkner/paul-buerkner.github.io/tree/master) blogs.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n### Testing Head 1 \n\n[^1]\n\n[^1]: Testing how footnotes look like\n\n#### Testing Head 2\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

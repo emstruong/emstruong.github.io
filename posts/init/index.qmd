@@ -1,0 +1,22 @@
+---
+title: "Welcome to my Blog"
+date: "2025-07-19"
+categories: [news]
+---
+
+First blog post based on default template by Tristan O'Malley.\
+
+Much of the design and functionality of this blog is copy-pasted manually from [Dr. Merkle](https://github.com/ecmerkle/ecmerkle.github.io) and [Dr. Burkner's](https://github.com/paul-buerkner/paul-buerkner.github.io/tree/master) blogs.
+
+```{r, echo=FALSE}
+rnorm(1337, mean = 42, sd = pi) |>
+  hist(main = "", col = "red")
+```
+
+### Testing Head 1
+
+This is a footnote test[^1]
+
+[^1]: Testing how footnotes look like
+
+#### Testing Head 2

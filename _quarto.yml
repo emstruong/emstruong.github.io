@@ -37,7 +37,7 @@ website:
   page-footer: 
       left: "Copyright 2025, Michael Shiuming Truong"
       right: 
-          - text: "Based on Dr. Paul Bürkner's Website"
+          - text: "Primarily designed based on Dr. Paul Bürkner's Website"
             href: https://github.com/paul-buerkner/paul-buerkner.github.io/tree/master
       
 format:

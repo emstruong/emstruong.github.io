@@ -1,7 +1,8 @@
 ---
 title: "Learning and Thinking about Statistical Learning and Thinking"
+subtitle: "Soliciting topical emails."
 listing:
-  contents: ../posts
+  contents: posts
   sort: "date desc"
   type: default
   categories: true
