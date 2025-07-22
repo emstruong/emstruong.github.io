@@ -43,4 +43,13 @@ author:
 # Default fields for citation
 citation: true
 
-# google-scholar: true
+google-scholar: true
+
+# MathJax Things
+## eeholmes on January 27/2023 
+## https://github.com/quarto-dev/quarto-cli/discussions/4132#discussioncomment-4801747
+format: 
+    html:
+        include-in-header: mathjax.html 
+        
+        

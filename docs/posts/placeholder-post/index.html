@@ -9,7 +9,7 @@
 <meta name="author" content="Michael S. Truong">
 <meta name="dcterms.date" content="2025-07-20">
 
-<title>First Real Post – Michael Shiuming Truong</title>
+<title>Test Post – Michael Shiuming Truong</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,12 +70,55 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+  MathJax = {
+    tex: {
+      tags: 'ams'  // should be 'ams', 'none', or 'all'
+    }
+  };
+</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
+<meta name="citation_title" content="Test Post">
+<meta name="citation_author" content="Michael S. Truong">
+<meta name="citation_publication_date" content="2025-07-20">
+<meta name="citation_cover_date" content="2025-07-20">
+<meta name="citation_year" content="2025">
+<meta name="citation_online_date" content="2025-07-20">
+<meta name="citation_language" content="en">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -135,11 +178,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">First Real Post</h1>
+      <h1 class="title">Test Post</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
                 <div class="quarto-category">analysis</div>
+                <div class="quarto-category">interactions</div>
+                <div class="quarto-category">EDA</div>
+                <div class="quarto-category">causal discovery</div>
+                <div class="quarto-category">p-values</div>
               </div>
                   </div>
   </div>
@@ -175,31 +220,53 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#testing-head-1" id="toc-testing-head-1" class="nav-link active" data-scroll-target="#testing-head-1">Testing Head 1</a>
+  <ul class="collapse">
+  <li><a href="#testing-head-2" id="toc-testing-head-2" class="nav-link" data-scroll-target="#testing-head-2">Testing Head 2</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
 
-<p>This is a placeholder post for later</p>
+<p>This is a placeholder test post</p>
+<p><span class="math display">\[\begin{align}
+EM_{ij} &amp;= \beta_0 + \beta_1 HPC_L + \beta_2 HPC_R \\
 
+EM_{ij} &amp;= \beta_0 + \beta_1 HPC_L + \beta_2 HPC_R + \beta_3 (HPC_L:HPC_R)
+\end{align}\]</span></p>
+<section id="testing-head-1" class="level1 page-columns page-full">
+<h1>Testing Head 1</h1>
+<p>This is a footnote test<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Test</p></div></div><section id="testing-head-2" class="level2">
+<h2 class="anchored" data-anchor-id="testing-head-2">Testing Head 2</h2>
+
+
+</section>
+</section>
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{truong2025,
   author = {Truong, Michael S.},
-  title = {First {Real} {Post}},
+  title = {Test {Post}},
   date = {2025-07-20},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-truong2025" class="csl-entry quarto-appendix-citeas" role="listitem">
-Truong, Michael S. 2025. <span>“First Real Post.”</span> July 20, 2025.
+Truong, Michael S. 2025. <span>“Test Post.”</span> July 20, 2025.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -12,11 +12,3 @@ Much of the design and functionality of this blog is copy-pasted manually from [
 rnorm(1337, mean = 42, sd = pi) |>
   hist(main = "", col = "red")
 ```
-
-### Testing Head 1
-
-This is a footnote test[^1]
-
-[^1]: Testing how footnotes look like
-
-#### Testing Head 2

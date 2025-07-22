@@ -1,7 +1,23 @@
 ---
-title: "First Real Post"
+title: "Test Post"
 date: "2025-07-20"
-categories: [news, code, analysis]
+categories: [analysis, interactions, EDA, causal discovery, p-values]
 ---
 
-This is a placeholder post for later
+This is a placeholder test post
+
+
+\begin{align}
+EM_{ij} &= \beta_0 + \beta_1 HPC_L + \beta_2 HPC_R \\
+
+EM_{ij} &= \beta_0 + \beta_1 HPC_L + \beta_2 HPC_R + \beta_3 (HPC_L:HPC_R)
+\end{align}
+
+
+# Testing Head 1
+
+This is a footnote test[^1]
+
+[^1]: Test
+
+## Testing Head 2

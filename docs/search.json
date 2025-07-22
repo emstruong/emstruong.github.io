@@ -9,9 +9,16 @@
   {
     "objectID": "posts/placeholder-post/index.html",
     "href": "posts/placeholder-post/index.html",
-    "title": "First Real Post",
+    "title": "Test Post",
     "section": "",
-    "text": "This is a placeholder post for later\n\n\n\nReuseCC BY 4.0CitationBibTeX citation:@online{truong2025,\n  author = {Truong, Michael S.},\n  title = {First {Real} {Post}},\n  date = {2025-07-20},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nTruong, Michael S. 2025. “First Real Post.” July 20, 2025."
+    "text": "This is a placeholder test post\n\\[\\begin{align}\nEM_{ij} &= \\beta_0 + \\beta_1 HPC_L + \\beta_2 HPC_R \\\\\n\nEM_{ij} &= \\beta_0 + \\beta_1 HPC_L + \\beta_2 HPC_R + \\beta_3 (HPC_L:HPC_R)\n\\end{align}\\]"
+  },
+  {
+    "objectID": "posts/placeholder-post/index.html#testing-head-2",
+    "href": "posts/placeholder-post/index.html#testing-head-2",
+    "title": "Test Post",
+    "section": "Testing Head 2",
+    "text": "Testing Head 2"
   },
   {
     "objectID": "cv/index.html",
@@ -67,7 +74,7 @@
     "href": "index.html",
     "title": "Learning and Thinking about Statistical Learning and Thinking",
     "section": "",
-    "text": "First Real Post\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 20, 2025\n\n\nMichael S. Truong\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to my Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 19, 2025\n\n\nMichael S. Truong\n\n\n\n\n\n\nNo matching items"
+    "text": "Test Post\n\n\n\n\n\n\nanalysis\n\n\ninteractions\n\n\nEDA\n\n\ncausal discovery\n\n\np-values\n\n\n\n\n\n\n\n\n\nJul 20, 2025\n\n\nMichael S. Truong\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to my Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 19, 2025\n\n\nMichael S. Truong\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/init/index.html",
