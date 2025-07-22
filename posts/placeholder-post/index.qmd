@@ -8,9 +8,9 @@ This is a placeholder test post
 
 
 \begin{align}
-EM_{ij} &= \beta_0 + \beta_1 HPC_L + \beta_2 HPC_R \\
+EF_{i} &= \beta_0 + \beta_1 lmPFC_i + \beta_2 rmPFC_i \\
 
-EM_{ij} &= \beta_0 + \beta_1 HPC_L + \beta_2 HPC_R + \beta_3 (HPC_L:HPC_R)
+EF_{ij} &= \beta_0 + \beta_1 lmPFC_i + \beta_2 rmPFC_i + \beta_3 (lmPFC_i:rmPFC_i)
 \end{align}
 
 
