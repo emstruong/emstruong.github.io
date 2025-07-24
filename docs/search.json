@@ -11,7 +11,7 @@
     "href": "posts/placeholder-post/index.html",
     "title": "Test Post",
     "section": "",
-    "text": "This is a placeholder test post\n\\[\\begin{align}\nEM_{ij} &= \\beta_0 + \\beta_1 HPC_L + \\beta_2 HPC_R \\\\\n\nEM_{ij} &= \\beta_0 + \\beta_1 HPC_L + \\beta_2 HPC_R + \\beta_3 (HPC_L:HPC_R)\n\\end{align}\\]"
+    "text": "This is a placeholder test post\n\\[\\begin{align}\nEF_{i} &= \\beta_0 + \\beta_1 lmPFC_i + \\beta_2 rmPFC_i \\\\\n\nEF_{ij} &= \\beta_0 + \\beta_1 lmPFC_i + \\beta_2 rmPFC_i + \\beta_3 (lmPFC_i:rmPFC_i)\n\\end{align}\\]"
   },
   {
     "objectID": "posts/placeholder-post/index.html#testing-head-2",
