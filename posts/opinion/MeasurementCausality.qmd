@@ -1,0 +1,10 @@
+---
+title: "Can you separate measurement and causality?"
+date: "2026-04-10"
+draft: FALSE
+categories: [opinion, psychometrics, philosophy of science]
+---
+
+There's no such thing as a causality-free measurement. Measurement requires causal assumptions. 
+
+This is similar to what is expressed in @borsboomTheoreticalStatusLatent2003a.

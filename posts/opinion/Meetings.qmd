@@ -1,0 +1,8 @@
+---
+title: "Professional Meetings"
+date: "2026-01-24"
+draft: FALSE
+categories: [opinion]
+---
+
+It's never a bad idea to come to a professional meeting with a succinct slide deck outlining: (1) what issues to discuss; (2) summaries of the issues; (3) your thoughts-on/attempts-at the issues; (4) your next steps; (5) and a blank slide for noting meeting discussions and next steps.

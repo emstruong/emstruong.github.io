@@ -1,0 +1,10 @@
+---
+title: "On Learning and Teaching"
+date: "2026-08-14"
+draft: FALSE
+categories: [opinion, teaching]
+---
+
+As a student, an important skill is the ability to introspect and independently identify why you don't understand something. 
+
+As a teacher, an important skill is the ability to understand why a student doesn't understand something.

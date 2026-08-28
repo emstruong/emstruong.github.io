@@ -1,0 +1,511 @@
+---
+title: "Resources and Tools for Writing Your Own and Understanding Other People’s R Packages (2025)"
+date: "2025-09-17"
+draft: false
+freeze: false
+bibliography: grateful-refs.bib
+citation-location: document
+categories: [R, Programming]
+citation: true
+---
+
+Writing and understanding `R` packages can be quite challenging.
+
+To make things easier, I've compiled a short list of `R` libraries that may be helpful for this task.[^1]
+
+[^1]: This is not a comprehensive list, but there doesn't seem to be a [CRAN task view](https://cran.r-project.org/web/views/) for this sort of thing and I am trying to fill this gap. The closest match might be the ["Reproducible Research" CRAN Task View](https://cran.r-project.org/web/views/ReproducibleResearch.html).
+
+I've only used a subset of them, but I hope to update this blog post when I figure out whether I can make them live up to my hype.[^2]
+
+[^2]: It's also worth noting that the packages I cite generally lean towards those actively supported by Posit, specifically under the collection of R packages maintained under "[r-lib](https://github.com/r-lib)". This isn't necessarily good or bad, but it's helpful to use software that is actively maintained. The hope is that one will be able to learn the package once, then use it for a long time and in a very productive manner. Also, a highly used package is a highly tested package, which helps make for a good user experience.
+
+```{r, echo = FALSE, eval = TRUE, include=FALSE, output=FALSE}
+# General
+library(rlang)
+library(generics)
+library(waldo)
+library(digest)
+library(lobstr)
+library(ellipsis)
+library(callr)
+library(evaluate)
+library(devtools)
+library(reprex)
+library(sessioninfo)
+library(clipr)
+library(datapasta)
+
+# Benchmarking
+library(bench)
+library(profvis)
+library(proftools)
+
+# Static Code Analysis
+library(lintr)
+library(checkglobals)
+library(codetools)
+library(globals)
+library(pkgnet)
+library(CodeDepends)
+library(flowr)
+
+# Tests
+library(covr)
+library(testthat)
+library(unittest)
+library(unitizer)
+library(RUnit)
+library(tinytest)
+
+# Debugging
+library(debugme)
+
+# Memory Analysis
+# library(memtools) # Not supported on R 4.6 as of April 29/2026
+
+# Logging
+library(log4r)
+library(logger)
+library(lumberjack)
+library(logrx)
+library(tidylog)
+library(logr)
+library(whirl)
+
+# Printing to terminal
+library(crayon)
+library(cli)
+library(prettyunits)
+library(pillar)
+
+# Writing this document -- unrelated to these tools
+library(grateful)
+```
+
+# General Packages and Resources
+
+1.  [`rlang`](https://rlang.r-lib.org/)
+    -   This package has many advanced features. In particular, it can help diagnose errors by formatting them into a readable format.
+
+        ```{r, eval = FALSE}
+        rlang::global_entrance()
+        rlang::trace_back()
+        rlang::try_fetch()
+        ```
+2.  [`generics`](https://generics.r-lib.org/)
+    -   Promises to make the UX of your package more similar to other packages, while reducing the number of dependencies.
+    -   The chief example is letting you write a `tidy` method, without importing `broom`.
+3.  Comparing `R` Objects
+    1.  [`waldo`](https://waldo.r-lib.org/)
+        -   Colorful and user-friendly comparison of R-objects.
+
+            ```{r, eval = FALSE}
+            wald::compare()
+            ```
+
+        -   Contrast with `all.equal()` and `identical()`
+    2.  [`digest`](https://dirk.eddelbuettel.com/code/digest.html)
+        -   This package is unusual in that it compares objects using hashes.
+
+            ```{r, eval=FALSE}
+            digest::digest()
+            ```
+
+        -   I imagine this could be particularly useful in cases of exact numerical comparisons with no tolerance, which may sometimes occur during statistical computing.
+4.  [`lobstr`](https://lobstr.r-lib.org/)
+    -   Better than `str()`.
+
+        ```{r, eval=FALSE}
+        lobstr::ast()
+        lobstr::cst()
+        lobstr::ref()
+        lobstr::tree()
+        ```
+5.  [`ellipsis`](https://ellipsis.r-lib.org/)
+    -   The `...` functionality in R is powerful in a potentially dangerous way. This package helps users understand the use of `...`.
+
+        ```{r, eval = FALSE}
+        ellipsis::check_dots_empty()
+        ellipsis::check_dots_unnamed()
+        ellipsis::check_dots_used()
+        ```
+6.  [`callr`](https://callr.r-lib.org/)
+    -   This package helps run `R` code in a separate process. This might be handy when you're inside a debugging environment and want to test something.
+
+        ```{r, eval=FALSE}
+        callr::r()
+        ```
+7.  [`evaluate`](https://evaluate.r-lib.org/)
+    -   Recreates command line behavior.
+
+        ```{r, eval=FALSE}
+        evaluate::parse_all()
+        evaluate::evaluate()
+        evaluate::replay()
+        ```
+
+    -   Perhaps this would be helpful to recreate a point in a debugging environment?
+8.  [`devtools`](https://devtools.r-lib.org/)
+    -   Default package for developing `R` packages.
+9.  [`reprex`](https://reprex.tidyverse.org/)
+    -   Must-have for reporting bugs and communicating with other developers.
+10. [`sessioninfo`](https://sessioninfo.r-lib.org/)
+    -   A must-have for communicating with other developers and comparing environments between machines.
+11. [`clipr`](https://matthewlincoln.net/clipr/)
+    -   Intermediary between `R` and your clipboard.
+
+        ```{r, eval = FALSE}
+        clipr::write_clip()
+        clipr::read_clip()
+        ```
+
+    -   Could be helpful when you're inside a debugging environment.
+12. [`datapasta`](https://milesmcbain.github.io/datapasta/)
+    -   Can be used to copy data and try to read into `R` more easily.
+13. [`Air`](https://www.tidyverse.org/blog/2025/02/air/)
+    -   Format `R` code really fast, is not a package.
+14. [Writing R extensions](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html)
+    -   Classic.
+15. [Advanced R](https://adv-r.hadley.nz/)
+    -   Classic.
+16. [R Packages](https://r-pkgs.org/)
+    -   Classic.
+
+# Benchmarking
+
+Benchmarking is important for comparing different implementations of the same idea. It can also help with performance tuning.
+
+1.  [`bench`](https://bench.r-lib.org/)
+
+    -   Comparing performance of different functions.
+
+        ```{r, eval=FALSE}
+        bench::mark()
+        ```
+
+2.  [`profvis`](https://profvis.r-lib.org/)
+
+    -   Timing specific components of functions.
+
+        ```{r, eval = FALSE}
+        profvis::profvis()
+        ```
+
+3.  [`proftools`](https://cran.r-project.org/web/packages/proftools/index.html)
+
+    -   Also for timing specific components of functions, but apparently [more sophisticated and advanced](https://profvis.r-lib.org/articles/faq.html?q=proftools#what-are-some-other-resources-for-profiling-r-code).
+
+        ```{r, eval=FALSE}
+        proftools::profileExpr()
+        proftools::plotProfileCallGraph()
+        proftools::flameGraph()
+        ```
+
+    -   See this [vignette for how to use it](https://cran.r-project.org/web/packages/proftools/vignettes/proftools.pdf).
+
+# Static Code Analysis
+
+These tools analyze `R` code without running them. It would probably be better to use these tools rather than trying to manually map out what happens to an `R` object using pen-and-paper.
+
+1.  [`lintr`](https://lintr.r-lib.org/)
+
+    -   Linting your code.
+
+        ```{r,eval=FALSE}
+        lintr::lint()
+        ```
+
+2.  [`checkglobals`](https://jorischau.github.io/checkglobals/)
+
+    -   See what variables and functions a `R` source code file uses.
+
+        ```{r,eval=FALSE}
+        checkglobals::checkglobals()
+        ```
+
+3.  [`codetools`](https://cran.r-project.org/web/packages/codetools/index.html)
+
+    -   Similar to `checkglobals` and `globals`.
+
+        ```{r, eval=FALSE}
+        codetools::findGlobals()
+        codetools::findLocals()
+        ```
+
+4.  [`globals`](https://globals.futureverse.org/)
+
+    1.  Similar to `checkglobals` and `codetools`.
+
+        ```{r, eval = FALSE}
+        globals::Globals()
+        ```
+
+5.  [`pkgnet`](https://uptake.github.io/pkgnet/index.html)
+
+    -   Dependency graph of a package and/or its functions.
+
+        ```{r, eval=FALSE}
+        pkgnet::CreatePackageReport()
+        pkgnet::CreatePackageVignette()
+        pkgnet::DefaultReporters()
+        pkgnet::DependencyReporter()
+        pkgnet::FunctionReporter()
+        pkgnet::InheritanceReporter()
+        pkgnet::PackageReport()
+        pkgnet::SummaryReporter()
+        ```
+
+6.  [CodeDepends](https://cran.r-project.org/web/packages/CodeDepends/index.html)
+
+    -   As per the vignette, "the CodeDepends package provides a flexible framework for statically analyzing R code (i.e., without evaluating it). It also contains higher-level functionality for: detecting dependencies between R code blocks or expressions, “tree-shaking” (pruning a script down to only the expressions necessary to evaluate a given expression), plotting variable usage timelines, and more."
+
+    -   [See this vignette for more](https://cran.r-project.org/web/packages/CodeDepends/vignettes/intro.html)
+
+        ```{r,eval=FALSE}
+        CodeDepends::getInputs()
+        CodeDepends::inputCollector()
+        CodeDepends::makeCallGraph()
+        CodeDepends::makeTaskGraph()
+        CodeDepends::makeVariableGraph()
+        CodeDepends::getDetailedTimelines()
+        ```
+
+7.  [`flowr`](https://github.com/flowr-analysis/flowr-r-adapter)
+
+    -   As per the associated [master thesis' abstract](http://dx.doi.org/10.18725/OPARU-50107), "In this master thesis we describe the construction of a backward program slicer for the R programming language. Given a variable at a specific point in the program, a so-called "slicing criterion", the slicer returns the subset of the program that might affect the value of the variable."
+
+    -   Interfaces with the external program [`flowr`](https://github.com/flowr-analysis/flowr).
+
+    -   This seems rather sophisticated and actively developed, rather than describe it very inaccurately, [it would be better for me to link to its Wiki](https://github.com/flowr-analysis/flowr/wiki/Overview) and the [associated master thesis](http://dx.doi.org/10.18725/OPARU-50107).
+
+# Tests
+
+Tests are important for making sure that your code really does what it's supposed to do. There's also the popular philosophy of 'test driven development', which can help guide the development of your package based on some clear criteria, meaning tests.
+
+1.  [`covr`](https://cran.r-project.org/web/packages/covr/index.html)
+
+    -   Test coverage for your functions.
+
+        ```{r, eval = FALSE}
+        covr::report()
+        covr::package_coverage()
+        ```
+
+2.  [`testthat`](https://testthat.r-lib.org/)
+
+    -   Default testing package.
+
+3.  [`unittest`](https://cran.r-project.org/web/packages/unittest/index.html)
+
+    -   This might be more lightweight than `testthat` and require less set-up.
+
+        ```{r,eval=FALSE}
+        unittest::ok()
+        unittest::ok_group()
+        unittest::ut_cmp_equal()
+        unittest::ut_cmp_error()
+        unittest::ut_cmp_identical()
+        unittest::ut_cmp_warning()
+        ```
+
+4.  [`unitizer`](https://cran.r-project.org/web/packages/unitizer/index.html)
+
+    -   This is like an interactive `testthat` that can write to your filesystem. [See this recording](https://htmlpreview.github.io/?https://github.com/brodieG/unitizer/blob/rc/extra/gifshow.html).
+
+    -   As per the [package vignette](https://cran.r-project.org/web/packages/unitizer/vignettes/u1_intro.html), the package "`unitizer` requires you to review test outputs and confirm they are as expected. \[In contrast, the package\] `testthat` requires you to assert what the test outputs should be beforehand."
+
+        ```{r, eval=FALSE}
+        unitizer::unitize()
+        demo(package = "unitizer")
+        browseVignettes("unitizer")
+        ```
+
+5.  [`RUnit`](https://cran.r-project.org/web/packages/RUnit/index.htm)
+
+    -   A testing package inspired by `JUnit`.
+
+    -   A notable feature seems to be the ability to track the value of a variable.
+
+    -   It apparently changes the random number generation. See this [vignette](https://cran.r-project.org/web/packages/RUnit/vignettes/RUnit.pdf) for more information.
+
+        ```{r,eval=FALSE}
+        RUnit::tracker()
+        RUnit::inspect()
+        ```
+
+6.  [`tinytest`](https://cran.r-project.org/web/packages/tinytest/index.html)
+
+    -   Seems similar in purpose to `unittest` and similar in usage to `testthat`.
+
+# Debugging
+
+Debugging is helpful when something has gone wrong/unexpected.
+
+1.  [`debugme`](https://r-lib.github.io/debugme/)
+    -   Lets you use strings to initialize debugging debugging, instead of `debug()`. Initialization depends on the system environment variable `DEBUGME`.
+
+    -   Inspired by `npm`'s `debug` package.
+
+        ```{r, eval=FALSE}
+        "!DEBUG Start up shiny"
+        debugme::debugme()
+        ```
+
+General Resources on debugging in R:
+
+-   [Advanced R](https://adv-r.hadley.nz/debugging.html)
+
+-   [Jim Hester's Talk on Youtube](https://www.youtube.com/watch?v=r7oBeEyN2jQ)
+
+-   [RStudio's Guide](https://docs.posit.co/ide/user/ide/guide/code/debugging.html#debugging-in-r-markdown-documents)
+
+# C/C++ and Memory Leaks
+
+When using `C/C++`, in particular, these utilities may be useful:
+
+1.  `lldb`
+
+2.  `valgrind`
+
+3.  `gdb`
+
+4.  [`memtools`](https://memtools.r-lib.org/) :
+
+    -   Something about memory leaks and analyzing memory in `R`.
+    -   Does not seem to be supported on `R` 4.6 as of April 29/2026
+
+        ```{r,eval=FALSE}
+        memtools::mem_snapshot()
+        memtools::mem_igraph()
+        memtools::root_ns_registry()
+        memtools::mem_stash()
+        memtools::obj_address()
+        memtools::mem_paths_shortest()
+        ```
+
+# Logging
+
+Generally, logging in `R` can be used to store the output of a script. For our purposes, it can be helpful for selectively understanding the state and development of an `R` object(s) over time–then storing this output in a human-readable format.
+
+This can be better than manually tracking an `R` object(s) and making mental notes of what happens to it.
+
+1.  [`log4r`](https://log4r.r-lib.org/)
+
+    -   Inspired by `Log4j`.
+
+        ```{r, eval=FALSE}
+        log4r::logger()
+        log4r::log_info()
+        log4r::log_warn()
+        log4r::log_debug()
+        ```
+
+    -   Website seems to be currently down: See <https://github.com/r-lib/log4r> and <https://log4r.r-lib.org/dev/>, instead.
+
+2.  [`logger`](https://daroczig.github.io/logger/)
+
+    -   Inspired by the `futile.logger` R package and Python's `logging`.
+
+        ```{r,eval=FALSE}
+        logger::log_info()
+        logger::log_warn()
+        logger::log_debug()
+        logger::log_formatter()
+        ```
+
+    -   This seems to overlap substantially with `log4r`.
+
+3.  [`lumberjack`](https://github.com/markvanderloo/lumberjack)
+
+    -   Allows tracking of an `R` object and an examination of how it changes.
+
+        ```{r,eval=FALSE}
+        lumberjack::start_log()
+        lumberjack::run_file()
+        lumberjack::stop_log()
+        lumberjack::cellwise
+        ```
+
+    -   [The JoSS paper and its vignettes should be consulted](https://www.jstatsoft.org/article/view/v098i01)
+
+4.  [`logrx`](https://pharmaverse.github.io/logrx/)
+
+    -   A quick glance seems to make this out to be a logger that doesn't require as much manual fiddling of what to log.
+
+        ```{r, eval=FALSE}
+        logrx::axecute()
+        ```
+
+    -   This also seems to be part of the `pharmaverse` series of packages.
+
+5.  [`tidylog`](https://cran.r-project.org/web/packages/tidylog/index.html)
+
+    -   Logging that is specific to `dplyr` and `tidyr`.
+
+6.  [`logr`](https://logr.r-sassy.org/)
+
+    -   An easy logger. Presumably similar to `logrx`, in purpose, but is supposed to be familiar to SAS users.
+
+        ```{r,eval=FALSE}
+        options(
+          "logr.autolog" = TRUE,
+          "logr.on" = TRUE,
+          "logr.notes" = TRUE,
+          "logr.compact" = TRUE,
+          "logr.traceback" = TRUE,
+          "logr.stdout" = TRUE,
+          "logr.linesize" = 100
+        )
+        logr::log_open()
+        logr::log_code()
+        logr:::sep()
+        logr::log_print()
+        logr::log_close()
+        ```
+
+    -   See the [available options here](https://logr.r-sassy.org/articles/logr-globals.html).
+
+7.  [`whirl`](https://novonordisk-opensource.github.io/whirl/index.html)
+
+    1.  As I copy pasted from the `whirl` [Overview](https://novonordisk-opensource.github.io/whirl/index.html):
+
+        "The whirl package provide functionalities for executing scripts in batch and simultaneously getting a log from the individual executions. A log from script execution is in many pharmaceutical companies a GxP requirement, and the whirl package honors this requirement by generating a log that, among other things, contains information about:
+
+        -   Status (did the script run with any error or warnings)
+        -   The actual code itself
+        -   Date and time of execution
+        -   The environment the script was executed under (session info)
+        -   Information about packages versions that was utilized
+        -   Environmental variables
+
+        And all this is wrapped into a nicely formatted html document that is easy to navigate."
+
+        ```{r,eval=FALSE}
+        whirl::run()
+        ```
+
+# Printing to Command Line
+
+1.  [`crayon`](https://r-lib.github.io/crayon/)
+
+    -   Formats `R` terminal output in pretty ways.
+
+2.  [`cli`](https://cli.r-lib.org/)
+
+    -   Good looking terminal output.
+
+3.  [`prettyunits`](https://r-lib.github.io/prettyunits/)
+
+    -   Good looking printing of units.
+
+4.  [`pillar`](https://pillar.r-lib.org/)
+
+    -   Good looking printing of columns.
+
+# Blog Post Computational Environment
+
+```{r, echo = FALSE}
+grateful::cite_packages(output = "paragraph", out.dir = ".")
+
+sessioninfo::session_info(info = "packages")
+```

@@ -1,0 +1,12 @@
+---
+title: "Note-Taking and Active Research"
+date: "2026-06-11"
+draft: FALSE
+categories: [opinion, workflow]
+---
+
+I've spent a lot of time thinking about how to summarize my notes, while reading papers or conducting mini-experiments. It turns out that the best summary that future me can understand is the scientific article format of Introduction, Method, Results and Discussion... What a concept!
+
+I always found that writing points of particular observations was unhelpful because they lacked context for future me to understand, regardless of the number of headings or keywords I tried to use. 
+
+Writing dense notes of every particular was also unhelpful because it'd take so long to understand that I would have practically redone my work!

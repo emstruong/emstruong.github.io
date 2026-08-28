@@ -1,0 +1,24 @@
+---
+title: "Placeholder Post"
+date: "2999-07-20"
+draft: true
+categories: [analysis, interactions, EDA, causal discovery, p-values]
+---
+
+This is a placeholder test post
+
+
+\begin{align}
+EF_{i} &= \beta_0 + \beta_1 lmPFC_i + \beta_2 rmPFC_i \\
+
+EF_{ij} &= \beta_0 + \beta_1 lmPFC_i + \beta_2 rmPFC_i + \beta_3 (lmPFC_i:rmPFC_i)
+\end{align}
+
+
+# Testing Head 1
+
+This is a footnote test[^1]
+
+[^1]: Test
+
+## Testing Head 2

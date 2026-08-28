@@ -1,0 +1,8 @@
+---
+title: "Toy Models of Academia"
+date: "2026-01-12"
+draft: FALSE
+categories: [Opinion]
+---
+
+GitHub issues are a microcosm of how academic research actually works.

@@ -1,0 +1,8 @@
+---
+title: "LLM Evaluations"
+date: "2026-05-05"
+draft: FALSE
+categories: [opinion, llm]
+---
+
+It's a bias of individualistic culture to evaluate LLM capabilities based on individual agents, as opposed to what can happen with a team of agents. What resources and framing should you give each team member? How should these teams be organized and led?

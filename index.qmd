@@ -1,0 +1,14 @@
+---
+title: "Learning and Thinking about Statistical Learning and Thinking"
+subtitle: "Soliciting topical emails."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image,date,title,author,reading-time,word-count,file-modified]
+page-layout: full
+title-block-banner: true
+---

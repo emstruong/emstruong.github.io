@@ -1,0 +1,11 @@
+library(pak)
+library(cpp11)
+# library(EGAnet)
+library(SimDesign)
+# pak::pak("KCEvers/sdbuildR")
+library(sdbuildR)
+# pak::pak("stan-dev/cmdstanr")
+library(cmdstanr)
+library(ragg)
+
+# c("r-lib/memtools", "flowr-analysis/flowr-r-adapter")

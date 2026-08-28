@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/opinion/LearningTeaching.html",
+      "/posts/opinion/NoteTaking_ActiveResearch.html",
+      "/posts/opinion/LLMEvaluations.html",
+      "/posts/opinion/MeasurementCausality.html",
+      "/posts/opinion/Meetings.html",
+      "/posts/opinion/ToyModels.html",
+      "/posts/quotes/quotes.html",
+      "/posts/r-dev-resources/index.html",
+      "/posts/init/index.html"
+    ]
+  }
+]

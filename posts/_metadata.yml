@@ -1,0 +1,69 @@
+# Shared options for posts
+
+# Copy-pasted from https://github.com/ecmerkle/ecmerkle.github.io/blob/main/cs/_metadata.yml
+
+# Freeze computed outputs
+freeze: true
+
+# Disable banner style title blocks
+title-block-banner: true
+title-block-style: default
+
+# Enable CC licence appendix
+license: "CC BY"
+
+# Default for table of contents
+toc: true
+toc-title: Contents
+toc-depth: 5
+toc-location: left
+
+# Footnote and References
+reference-location: margin
+citation-location: margin
+
+# Link sections
+anchor-sections: true
+
+# Default knitr options
+execute:
+  echo: true
+  message: true
+  warning: true
+
+# Default author
+author:
+  - name:
+      given: Michael S.
+      family: Truong
+    url: https://emstruong.github.io/
+    affiliation: York University
+    orcid: 0009-0006-4521-6528
+
+# Default fields for citation
+citation: false
+
+google-scholar: true
+
+bibliography: bibliography.bib
+# cite-method: biblatex
+# Apparently setting this to biblatex might cause problems
+
+# MathJax Things
+## eeholmes on January 27/2023 
+## https://github.com/quarto-dev/quarto-cli/discussions/4132#discussioncomment-4801747
+# FIXME: September 17/2025: Can't have both code-link and code-line-numbers https://quarto.org/docs/reference/formats/html.html
+format: 
+    html:
+        include-in-header: mathjax.html
+        code-overflow: wrap
+        code-line-numbers: false 
+        code-link: true 
+        embed-resources: true
+        self-contained-math: true
+        citations-hover: true
+        footnotes-hover: true
+        crossrefs-hover: true
+        link-external-icon: true
+        link-external-newwindow: true
+        highlight-style: github
