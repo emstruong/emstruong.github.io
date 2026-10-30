@@ -21,7 +21,11 @@ website:
       - text: Talks
         href: talks/index.qmd
       - text: CV
-        href: cv/index.qmd
+        menu:
+          - text: Academic CV
+            href: cv/academic.qmd
+          - text: Industry CV
+            href: cv/industry.qmd
       - text: About Me
         href: about/index.qmd
     right:
@@ -45,3 +49,4 @@ format:
     theme: 
         light: flatly
         dark: darkly
+    css: styles.css

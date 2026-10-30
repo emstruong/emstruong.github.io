@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -38,14 +41,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ca5564aa0eb3c15a6d6dd4665043005.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-0e788dc9c0530748afd83b6c4a46bc44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-5ca5564aa0eb3c15a6d6dd4665043005.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-eedb35c8aff59b5bbe295026ca08c377.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-476b74114a3b4491276650f0e68895a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-eedb35c8aff59b5bbe295026ca08c377.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -76,6 +79,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -265,10 +269,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../talks/index.html" aria-current="page"> 
 <span class="menu-text">Talks</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../cv/index.html"> 
-<span class="menu-text">CV</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cv" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">CV</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cv">    
+        <li>
+    <a class="dropdown-item" href="../cv/academic.html">
+ <span class="dropdown-text">Academic CV</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../cv/industry.html">
+ <span class="dropdown-text">Industry CV</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../about/index.html"> 
 <span class="menu-text">About Me</span></a>
@@ -325,10 +340,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <ul>
-<li><p>Truong MS. (2025) Talk: <em>Reply to Paul E. Meehl: Machine Learning Structural Equation Modeling and Falsificatory Data Analysis.</em> Presented at York University Quantitative Methods Forum. <a href="pdf/QM_Forum_September_29_2025.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Slides</a></p>
+<li><p>Truong MS., Crone, G., &amp; Choi, JY. (2025) Talk: <em>Exploring the Multiverse with Decision Trees</em> Presented at International Meeting of the Psychometric Society 2026. <a href="pdf/IMPS_mtruong_DTMV_July_16_2026.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Slides</a></p>
 <ul>
-<li><em>Abstract</em>: Here, a three-manuscript dissertation is proposed. The unifying theme among these three manuscripts is the synthesis of Falsificatory Data Analysis (FDA) and Machine Learning Structural Equation Modeling (ML-SEM), primarily as a means to assess and improve data quality. There exists a tension between the over-fitting inherent to the method of ML-SEM and the default belief that the null hypothesis is always false. The overall research question guiding this dissertation is whether a new methodology, FDA, can help motivate the productive use of ML-SEM. To answer this research question, three separate manuscripts are proposed. The first manuscript proposes the concept of FDA as an elaboration of the original confirmatory and exploratory data analysis distinction, then performs a logical analysis on the merits of the proposed concept. The second manuscript builds on the ML-SEM technique of SEM trees by researching the use of Integrated Generalised Structured Component Analysis (IGSCA) in SEM trees, as opposed to the traditional covariance-based SEM. This method of using IGSCA for SEM trees is named IGSCA trees. The third and final manuscript will demonstrate the scientific utility of synergizing FDA methodology with the method of ML-SEM in a ‘Tutorial’ style manuscript applied to various data analytical problems. The expected impact of this dissertation is a new elaboration of Tukey’s original distinction between exploratory and confirmatory data analysis; the introduction of a new variant of SEM trees; and a demonstration of how the two may be productively synergized.</li>
+<li><em>Abstract</em>: There are many decisions to be made in analyzing a dataset, but how do you know which decisions most affect your final results? Both multiverse analyses and single dataset multi-analyst papers have recently prompted a need for reflecting on the practice of data analysis. These papers can give the impression that you can both ‘follow the rules of statistics’, but also ‘obtain any result you want’. One of the chief concerns is how the combination of the many potential paths that an analyst might traverse can cause the outcome of an analysis to vary the entire spectrum of negative to positive values, as visualized using a specification curve analysis. Although recent literature has provided guidelines on restricting the number of possible analyses in the multiverse and how to interpret the effects of different paths, there is a gap. Namely, to the best of our knowledge, it is currently difficult for the analyst to select which branch of paths in the multiverse of choices most affected their outcome of interest; and also whether the effect of each path may have been moderated by the paths of other branches. This presentation offers a solution by using R to showcase how the method of decision trees may address this gap, step-by-step. We also discuss cautions for appropriately interpreting the outcome of your decision tree analysis within the context of multiverse analyses. &lt;!–</li>
 </ul></li>
+<li><p>Truong MS. (2025) Talk: <em>Reply to Paul E. Meehl: Machine Learning Structural Equation Modeling and Falsificatory Data Analysis.</em> Presented at York University Quantitative Methods Forum. <a href="pdf/QM_Forum_September_29_2025.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Slides</a> –&gt;</p></li>
 <li><p>Truong MS., Zhang, X., &amp; Flora, DB. (2025) Talk: <em>What Happens When Sample Size is the Confound in a Multilevel Model?</em> Presented at <a href="https://www.psychometricsociety.org/imps-2025">International Meeting of the Psychometric Society 2025</a>. <a href="pdf/IMPS_2025_MTruong_July_11_2025.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Slides</a> <a href="pdf/imps-2025-final-program.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Program</a> <a href="pdf/imps2025-abstracts.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Abstract</a></p></li>
 <li><p>Truong MS. &amp; Choi JY. (2024) Talk: <em>Machine Learning Structural Equation Modeling and Falsificatory Data Analysis.</em> Presented at <a href="https://cpa.ca/docs/File/Convention/2024/Abstract%20Book%202024-v1.2.pdf">Canadian Psychological Association 2024</a> and <a href="https://modeling.uconn.edu/mmm-2024-archive/">Modern Modeling Methods 2024</a>. <a href="pdf/MMM2024 Talk.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Slides</a> <a href="pdf/M3_2024_Program_06-24-2024.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">MMM Program</a> <a href="pdf/CPA_Abstract Book 2024-v1.2.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">CPA Program</a></p></li>
 <li><p>Truong MS., Crone G., Alter, U., &amp; Choi JY. (2024) Poster: <em>Planting Decision Trees: Human-Friendly Interpretation of Monte Carlo Simulations, Multiverse Analyses and Multivariate Posterior Distributions.</em> Presented at <a href="https://cpa.ca/docs/File/Convention/2024/Abstract%20Book%202024-v1.2.pdf">Canadian Psychological Association 2024</a> and <a href="https://modeling.uconn.edu/mmm-2024-archive/">Modern Modeling Methods 2024</a>. <a href="pdf/CPA_MMM_2024_Poster.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Poster</a> <a href="pdf/M3_2024_Program_06-24-2024.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">MMM Program</a> <a href="pdf/CPA_Abstract Book 2024-v1.2.pdf" class="btn btn-outline-primary btn-page-header btn-xs" role="button">CPA Program</a></p></li>
